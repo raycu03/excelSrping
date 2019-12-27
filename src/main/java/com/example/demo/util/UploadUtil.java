@@ -22,7 +22,7 @@ public class UploadUtil {
 	public Supplier<Stream<Integer>> cellIteratorSupplier(int end) {
 		return () -> numberStream(end);
 	}
-
+	
 	public Stream<Integer> numberStream(int end) {
 		return IntStream.range(0, end).boxed();
 	}
