@@ -2,10 +2,7 @@ package com.example.demo.controllers;
 
 import java.util.List;
 import java.util.Map;
-import java.util.function.Supplier;
-import java.util.stream.Stream;
 
-import org.apache.poi.ss.usermodel.Row;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -25,7 +22,7 @@ public class UploadController {
 	}
 
 	@PostMapping("/upload")
-	public List<Map<String, String>> upload(@RequestParam("file") MultipartFile file) throws Exception {
+	public Map<String, List<Map<String, String>>> upload(@RequestParam("file") MultipartFile file) throws Exception {
 		 return uploadService.upload(file);
 	}
 }
